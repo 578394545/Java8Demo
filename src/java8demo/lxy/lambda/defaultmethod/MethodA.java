@@ -10,4 +10,8 @@ public interface MethodA {
 	default void foo() {
 		System.out.println("Calling A.foo()");
 	}
+	
+	public static void bar(){
+		System.out.println("This is a static method from MethodA");
+	}
 }
