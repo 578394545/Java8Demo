@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  * @Title: DemoForTime <br />
- * @Description: LocalDate应用,对时间的操作 ,时间格式:hh:mm:ss.nnn<br />
+ * @Description: LocalDate应用,对时间的操作 ,时间格式:hh:mm:ss.nnn  这里的nnn是纳秒<br />
  * <br />
  * @author: Soar <br />
  */

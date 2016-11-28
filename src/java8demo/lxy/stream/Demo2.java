@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @Title: Demo2 <br />
@@ -49,5 +50,9 @@ public class Demo2 {
 				peek(System.out::println).
 				skip(2).limit(4).sum());
 
+		Integer sum1 = Stream.of(1, 2, 3, 4).reduce(0, (a, b) -> a+b);
+
+		Integer sum2 =Stream.of(1, 2, 3, 4).reduce(0,Integer::sum);
+		System.out.println(sum1);
 	}
 }

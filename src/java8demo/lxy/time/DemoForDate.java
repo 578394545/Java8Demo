@@ -6,6 +6,7 @@ import java.time.Month;
 import java.time.MonthDay;
 import java.time.Period;
 import java.time.YearMonth;
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -18,10 +19,12 @@ public class DemoForDate {
 	
 	public static void main(String[] args) {
 		
-		LocalDate today = LocalDate.now();
-		LocalDate birthDay = LocalDate.of(1991, 2, 26);
+		LocalDate today = LocalDate.now();//获取当前日期
+		
+		LocalDate birthDay = LocalDate.of(1991, 2, 26);//创建日期
 		
 		DemoForDate demo = new DemoForDate();
+		
 //		demo.basic(today);
 		
 //      demo.birth(birthDay);
@@ -38,6 +41,7 @@ public class DemoForDate {
 		
 //		demo.calculateDifference(today, birthDay);
 		
+//		demo.isLeapYear(today);
 	}
 	
 	/**
@@ -144,5 +148,13 @@ public class DemoForDate {
 	private void calculateDifference(LocalDate today, LocalDate birth){
 		Period result = Period.between(birth, today);
 		System.out.println("我已经活了 ： " + result.getYears() + " 年");
+	}
+	
+	private void isLeapYear(LocalDate today){
+		if(today.isLeapYear()){ 
+		    System.out.println("闰年"); 
+		}else { 
+		    System.out.println("非闰年"); 
+		}
 	}
 }
